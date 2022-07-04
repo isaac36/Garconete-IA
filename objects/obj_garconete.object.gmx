@@ -87,6 +87,9 @@ vetor[2]=anotar_pedido;
             <kind>1</kind>
             <string>if(keyboard_check(vk_escape)){game_restart()};
 
+image_xscale = 1.5;
+image_yscale = 1.5;
+
 if(pegueicomida==true){sprite_index=sprite9}else{sprite_index=sprite2}
 
 
@@ -95,10 +98,12 @@ if(pegueicomida==true){sprite_index=sprite9}else{sprite_index=sprite2}
 
 
 
-if(instance_exists(obj_balcao))and(obj_balcao.pedido&gt;0){script_execute(pegar_comida);}else
-if(pegueicomida==true){script_execute(entregar_comida)}else
-if(instance_exists(obj_mesa_cardapio)){script_execute(anotar_pedido)}else
-script_execute(esperar);
+if(pegueicomida==true){estado=entregar_comida}else
+if(instance_exists(obj_balcao))and(obj_balcao.pedido&gt;0){estado=pegar_comida;}else
+if(instance_exists(obj_mesa_cardapio)){estado=anotar_pedido}else
+estado=esperar;
+
+script_execute(estado);
 </string>
           </argument>
         </arguments>
