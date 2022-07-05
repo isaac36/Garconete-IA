@@ -16,6 +16,14 @@
     <sprite>sprites\sprite5</sprite>
     <sprite>sprites\sprite6</sprite>
     <sprite>sprites\sprite7</sprite>
+    <sprite>sprites\spr_personagem</sprite>
+    <sprite>sprites\spr_inimigo</sprite>
+    <sprite>sprites\spr_parede</sprite>
+    <sprite>sprites\spr_objetivo</sprite>
+    <sprite>sprites\spr_parede1</sprite>
+    <sprite>sprites\spr_parede2</sprite>
+    <sprite>sprites\spr_parede3</sprite>
+    <sprite>sprites\nada</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -34,18 +42,32 @@
       <object>objects\obj_enemy</object>
       <object>objects\object3</object>
     </objects>
-    <object>objects\object4</object>
-    <object>objects\obj_garconete</object>
-    <object>objects\obj_balcao</object>
-    <object>objects\obj_mesa_vazia</object>
-    <object>objects\obj_mesa_cardapio</object>
-    <object>objects\obj_mesa_esperando</object>
-    <object>objects\obj_mesa_comendo</object>
-    <object>objects\canto_de_espera</object>
+    <objects name="garconete">
+      <object>objects\canto_de_espera</object>
+      <object>objects\obj_mesa_comendo</object>
+      <object>objects\obj_mesa_esperando</object>
+      <object>objects\obj_mesa_cardapio</object>
+      <object>objects\obj_mesa_vazia</object>
+      <object>objects\obj_mesa</object>
+      <object>objects\obj_balcao</object>
+      <object>objects\obj_garconete_NAO_E_ESSA</object>
+      <object>objects\objetivo</object>
+    </objects>
+    <objects name="Pathfinding">
+      <object>objects\obj_garconete2</object>
+      <object>objects\obj_personagem</object>
+      <object>objects\obj_parede</object>
+      <object>objects\obj_setup</object>
+      <object>objects\parede1</object>
+      <object>objects\parede2</object>
+      <object>objects\parede3</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Tentando_fazer_coisas</room>
-    <room>rooms\room0</room>
+    <room>rooms\ROOM_DEFINITIVA</room>
+    <room>rooms\room_Tentando_Pathfinding</room>
+    <room>rooms\room_Tentando_fazer_coisas</room>
+    <room>rooms\room_grid_la_antiga</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
