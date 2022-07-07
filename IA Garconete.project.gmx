@@ -9,6 +9,8 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\spr_enemy</sprite>
     <sprite>sprites\sprite2</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_monstro</sprite>
     <sprite>sprites\sprite9</sprite>
     <sprite>sprites\balcao1</sprite>
     <sprite>sprites\balcao2</sprite>
@@ -24,6 +26,9 @@
     <sprite>sprites\spr_parede2</sprite>
     <sprite>sprites\spr_parede3</sprite>
     <sprite>sprites\nada</sprite>
+    <sprite>sprites\sprite21</sprite>
+    <sprite>sprites\sprite22</sprite>
+    <sprite>sprites\vida</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
@@ -34,6 +39,12 @@
     <script>scripts\entregar_comida.gml</script>
     <script>scripts\anotar_pedido.gml</script>
     <script>scripts\esperar.gml</script>
+    <scripts name="monstro">
+      <script>scripts\monstro_esperar.gml</script>
+      <script>scripts\monstro_perseguir.gml</script>
+      <script>scripts\monstro_fugir.gml</script>
+      <script>scripts\monstro_atirar.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="coisas do video la">
@@ -50,7 +61,6 @@
       <object>objects\obj_mesa_vazia</object>
       <object>objects\obj_mesa</object>
       <object>objects\obj_balcao</object>
-      <object>objects\obj_garconete_NAO_E_ESSA</object>
       <object>objects\objetivo</object>
     </objects>
     <objects name="Pathfinding">
@@ -62,9 +72,15 @@
       <object>objects\parede2</object>
       <object>objects\parede3</object>
     </objects>
+    <objects name="fuzzy">
+      <object>objects\obj_inimigo</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_tiro</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\ROOM_DEFINITIVA</room>
+    <room>rooms\romm_fuzzy</room>
     <room>rooms\room_Tentando_Pathfinding</room>
     <room>rooms\room_Tentando_fazer_coisas</room>
     <room>rooms\room_grid_la_antiga</room>
